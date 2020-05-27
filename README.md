@@ -77,3 +77,52 @@ config.dev.js 用于正常的 demo 构建配置，就不做详细说明了
   ...
 }
 ```
+
+### 按需引入
+
+在项目中安装`babel-plugin-import`
+
+```
+npm intsall babel-plugin-import -D
+
+or
+
+yarn add babel-plugin-import -D
+```
+
+在项目根目录下新建`babel.config.js`文件
+
+```
+module.exports = {
+  plugins: [
+    [
+      'import',
+      {
+        libraryName: 'vue-lib-test',  // 按需引入的npm包
+        style: false  // 因为我们css都是打包在js中的，所以直接设置为false
+      }
+    ]
+  ]
+}
+
+```
+
+**⚠️ 注意： 如果是全部引入组件包，需要删除以上配置，否则会影响组件包主入口文件的引入**
+
+### Run
+
+```
+yarn serve
+```
+
+### Build packages
+
+```
+yarn build
+```
+
+### Build Project
+
+```
+yarn build:app
+```
