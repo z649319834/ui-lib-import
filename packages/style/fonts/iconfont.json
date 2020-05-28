@@ -1,0 +1,359 @@
+{
+  "id": "1505749",
+  "name": "jy-element",
+  "font_family": "jyfont",
+  "css_prefix_text": "jy-icon-",
+  "description": "教研平台元素组件字体库",
+  "glyphs": [
+    {
+      "icon_id": "6957056",
+      "name": "subject2",
+      "font_class": "subject2",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "6957057",
+      "name": "subject4",
+      "font_class": "subject4",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "6957058",
+      "name": "subject3",
+      "font_class": "subject3",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "6957059",
+      "name": "subject10",
+      "font_class": "subject10",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "6957060",
+      "name": "subject9",
+      "font_class": "subject9",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "6957061",
+      "name": "subject8",
+      "font_class": "subject8",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "6957062",
+      "name": "subject1",
+      "font_class": "subject1",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "6957063",
+      "name": "subject5",
+      "font_class": "subject5",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "6957064",
+      "name": "subject6",
+      "font_class": "subject6",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "7657522",
+      "name": "answer",
+      "font_class": "answer",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "7657524",
+      "name": "correct",
+      "font_class": "correction",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "7657525",
+      "name": "dropDown",
+      "font_class": "arrow-bottom",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "7657528",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "7657533",
+      "name": "dropUp",
+      "font_class": "arrow-top",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "7657534",
+      "name": "favorite",
+      "font_class": "collection",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "7657537",
+      "name": "dropRight",
+      "font_class": "arrow-right",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "7657540",
+      "name": "dropLeft",
+      "font_class": "arrow-left",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "7657545",
+      "name": "preview",
+      "font_class": "preview",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "7657548",
+      "name": "simpleChinese",
+      "font_class": "simple-chinese",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "7657551",
+      "name": "suggest",
+      "font_class": "recommend",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "7657552",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "7657553",
+      "name": "zoomOut",
+      "font_class": "zoomOut",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "7657558",
+      "name": "zoomIn",
+      "font_class": "zoomIn",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "7657560",
+      "name": "delete",
+      "font_class": "delete",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "7657653",
+      "name": "attention",
+      "font_class": "warning",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "7657657",
+      "name": "tool-cartfilled",
+      "font_class": "car",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "7657666",
+      "name": "tool-select",
+      "font_class": "select",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "7658256",
+      "name": "fullScreenExit",
+      "font_class": "fullScreenExit",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "7659300",
+      "name": "information",
+      "font_class": "details",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "7659384",
+      "name": "zuoda",
+      "font_class": "zuoda",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "7688770",
+      "name": "video",
+      "font_class": "video",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "7719801",
+      "name": "icon:Disable",
+      "font_class": "disabled",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "7874669",
+      "name": "loading",
+      "font_class": "loading",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "7918673",
+      "name": "nodeExpend",
+      "font_class": "nodeExpend",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "7918674",
+      "name": "nodeCollapse",
+      "font_class": "nodeCollapse",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "7929779",
+      "name": "rename",
+      "font_class": "modify",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "8771384",
+      "name": "arrow-down",
+      "font_class": "arrow-down",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "8835471",
+      "name": "marks",
+      "font_class": "marks",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "9735075",
+      "name": "view",
+      "font_class": "view",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "9774772",
+      "name": "注",
+      "font_class": "zhu",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    },
+    {
+      "icon_id": "9774773",
+      "name": "拼",
+      "font_class": "pin",
+      "unicode": "e678",
+      "unicode_decimal": 59000
+    },
+    {
+      "icon_id": "9774774",
+      "name": "译",
+      "font_class": "yi",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "9774785",
+      "name": "setting",
+      "font_class": "setting",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "10322128",
+      "name": "分享",
+      "font_class": "share",
+      "unicode": "e686",
+      "unicode_decimal": 59014
+    },
+    {
+      "icon_id": "10323588",
+      "name": "删除",
+      "font_class": "clear",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "11803212",
+      "name": "试题查重",
+      "font_class": "removeRepeat",
+      "unicode": "e6b2",
+      "unicode_decimal": 59058
+    },
+    {
+      "icon_id": "11803214",
+      "name": "复制ID",
+      "font_class": "copyId",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "11803423",
+      "name": "移除",
+      "font_class": "remove",
+      "unicode": "e6b5",
+      "unicode_decimal": 59061
+    },
+    {
+      "icon_id": "11803436",
+      "name": "添加",
+      "font_class": "add",
+      "unicode": "e6b6",
+      "unicode_decimal": 59062
+    },
+    {
+      "icon_id": "12852084",
+      "name": "done",
+      "font_class": "done",
+      "unicode": "e6b7",
+      "unicode_decimal": 59063
+    }
+  ]
+}

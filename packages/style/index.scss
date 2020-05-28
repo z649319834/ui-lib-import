@@ -1,0 +1,114 @@
+@import './fonts/iconfont.css';
+
+/* 重置字体文件字号大小 */
+.jyfont {
+  display: inline-block;
+  transform-origin: center center;
+  font-size: 12px;
+  color: inherit;
+}
+
+/* 文字溢出 */
+.text-hidden {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 过渡动画 */
+.is-transition {
+  transition: all 0.3s;
+}
+
+/* 自定义滚动条 */
+.scrollbar {
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* safari滑动 */
+  -webkit-overflow-scrolling: touch;
+  // 平滑滚动的效果
+  scroll-behavior: smooth;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 3px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #ced2d9;
+  border-radius: 3px;
+}
+
+// 清除浮动
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: block;
+  height: 0;
+}
+
+.is-empty:empty {
+  display: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
+/* 组件公共样式 */
+.jy-element * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.jy-element {
+  position: relative;
+  border-radius: 4px;
+  background: #fff;
+
+  i {
+    font-style: normal;
+  }
+
+  // 边框
+  &.is-border {
+    border: 1px solid #edf0f2;
+  }
+
+  // 阴影
+  &.is-shadow:hover {
+    box-shadow: 0px 0px 12px 0px rgba(24, 46, 63, 0.1);
+    z-index: 1;
+  }
+
+  // 选中
+  &.is-selected {
+    background: #fcfcfc;
+
+    &.is-border {
+      border-color: #3f92ff;
+    }
+  }
+
+  // 禁用
+  &.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .jy-element-left {
+    float: left;
+  }
+
+  .jy-element-right {
+    float: right;
+    text-align: right;
+  }
+}
+
+.tal-button {
+  color: yellow;
+  background: green;
+}

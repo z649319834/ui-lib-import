@@ -4,7 +4,11 @@ const pub = require('./config.pub')
 module.exports = {
   outputDir: resolve('lib'),
   configureWebpack: {
-    entry: getComponentEntries('packages'),
+    entry: {
+      ...getComponentEntries('packages/components'),
+      style: resolve('/packages/style/index.scss'),
+      index: resolve('/packages/index.js')
+    },
     output: {
       filename: '[name]/index.js',
       libraryTarget: 'umd',
@@ -14,8 +18,10 @@ module.exports = {
     resolve: pub.resolve
   },
   css: {
-    // sourceMap: true,
-    extract: false
+    sourceMap: false,
+    extract: {
+      filename: '[name]/index.css'
+    }
   },
   chainWebpack: config => {
     config.optimization.delete('splitChunks')

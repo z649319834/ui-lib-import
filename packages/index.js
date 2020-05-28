@@ -1,7 +1,7 @@
-import './common.css'
-import Button from './button/index'
-import Input from './input/index'
-import Element from './element/index'
+import './style/index.scss'
+import Button from './components/button/index'
+import Input from './components/input/index'
+import Element from './components/element/index'
 
 const components = [Button, Input, Element]
 const Lib = {
