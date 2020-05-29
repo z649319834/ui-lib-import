@@ -1,7 +1,9 @@
 <template>
   <div class="tal-input">
     <label>名称</label>
-    <input type="text" placeholder="请输入文字" />
+    <slot>
+      <input type="text" placeholder="请输入文字" />
+    </slot>
   </div>
 </template>
 
@@ -12,7 +14,7 @@ export default {
 </script>
 
 <style scoped>
-.tal-button {
+.tal-input {
   width: 200px;
   height: 30px;
   border: 1px solid red;

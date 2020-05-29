@@ -1,5 +1,7 @@
 <template>
-  <button class="tal-button">按钮</button>
+  <div class="tal-button">
+    <slot>按钮</slot>
+  </div>
 </template>
 
 <script>
@@ -14,5 +16,8 @@ export default {
   height: 30px;
   color: aqua;
   background: red;
+  border: 1px solid red;
+  text-align: center;
+  line-height: 30px;
 }
 </style>

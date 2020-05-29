@@ -28,17 +28,25 @@ module.exports = {
       filename: '[name]/index.js',
       libraryTarget: 'umd',
       libraryExport: 'default',
-      library: 'VueLib'
+      library: 'Lib'
     },
+    externals: ['vue'], // 排除不需要打包的依赖
     resolve: pub.resolve
   },
   css: {
     // 建议关闭，减少体积大小
-    sourceMap: false,
-    // 必须关闭，如果设置为true，在项目中无法通过babel-plugin-import自动引入，所以直接打包在js文件中
-    extract: false
+    sourceMap: true,
+    /**
+     设置为true，需要在项目的 babel.config.js 文件中配置 babel-plugin-import 按需加载，公共部分需要自己手动引入。(建议)
+     设置为false，直接把css打包在js中，但是公共的样式也会变成js文件，而且需要手动引入
+    */
+    extract: {
+      // css存储的路径和名字
+      filename: '[name]/index.css'
+    }
   },
   chainWebpack: config => {
+
     <!-- 删除不必要的配置，都是vue-cli自带的，编译用不到 -->
     config.optimization.delete('splitChunks')
     config.plugins.delete('copy')
@@ -48,12 +56,28 @@ module.exports = {
     config.plugins.delete('hmr')
     config.entryPoints.delete('app')
 
-    // 提取字体文件
+    // 修改字体文件输出的路径
     config.module
       .rule('fonts')
       .use('url-loader')
       .tap(option => {
-        option.fallback.options.name = 'static/fonts/[name].[hash:8].[ext]'
+        option.fallback.options.name = 'style/fonts/[name].[hash:8].[ext]'
+        return option
+      })
+    // 修改图片输出的路径
+    config.module
+      .rule('images')
+      .use('url-loader')
+      .tap(option => {
+        option.fallback.options.name = 'style/images/[name].[hash:8].[ext]'
+        return option
+      })
+    // 修改图片｜字体输出的路径,
+    config.module
+      .rule('svg')
+      .use('file-loader')
+      .tap(option => {
+        option.name = 'style/images/[name].[hash:8].[ext]'
         return option
       })
   }
@@ -61,7 +85,7 @@ module.exports = {
 
 ```
 
-config.dev.js 用于正常的 demo 构建配置，就不做详细说明了
+config.dev.js 用于正常的开发构建配置，就不做详细说明了
 
 ### npm publish
 
@@ -70,6 +94,7 @@ config.dev.js 用于正常的 demo 构建配置，就不做详细说明了
   "name": "vue-lib-test", // 包名
   "version": "1.0.7",
   "main": "lib/index/index.js", // 主入口文件
+  "style": "lib/index/index.css", // 主入口文件样式
   "files": [  // 发布需要上传的文件
     "lib",
     "packages"
@@ -90,7 +115,7 @@ or
 yarn add babel-plugin-import -D
 ```
 
-在项目根目录下新建`babel.config.js`文件
+按需引入在项目根目录下新建`babel.config.js`文件
 
 ```
 module.exports = {
@@ -99,7 +124,7 @@ module.exports = {
       'import',
       {
         libraryName: 'vue-lib-test',  // 按需引入的npm包
-        style: false  // 因为我们css都是打包在js中的，所以直接设置为false
+        style: name => `${name}/index.css`   // 根据自己设置的extract打包的路径返回css文件，就是文件可以自动引入，css文件目前没有找到原因，所以需要手动设置
       }
     ]
   ]

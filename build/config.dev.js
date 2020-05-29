@@ -1,29 +1,20 @@
-const pub = require('./config.pub')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const baseConfig = require('./config.base')
+
 module.exports = {
-  pages: {
-    index: {
-      // page 的入口
-      entry: 'src/main.ts',
-      // 模板来源
-      template: 'public/index.html',
-      // 在 dist/index.html 的输出
-      filename: 'index.html',
-      // 当使用 title 选项时，
-      // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-      title: 'Vue Lib',
-      // 在这个页面中包含的块，默认情况下会包含
-      // 提取出来的通用 chunk 和 vendor chunk。
-      chunks: ['chunk-vendors', 'chunk-common', 'index']
-    }
+  publicPath: './',
+  css: {
+    extract: false
   },
   configureWebpack: {
-    resolve: pub.resolve,
-    plugins: [
-      new BundleAnalyzerPlugin({
-        analyzerPort: Math.floor(Math.random() * 8999 + 1000),
-        openAnalyzer: false // 自动打开浏览器
-      })
-    ]
+    ...baseConfig
+  },
+  chainWebpack: config => {
+    // GraphQL Loader
+    config.module
+      .rule('markdown')
+      .test(/\.md$/)
+      .use('markdown-loader')
+      .loader('html-loader')
+      .end()
   }
 }

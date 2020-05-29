@@ -1,21 +1,21 @@
 const fs = require('fs')
 const path = require('path')
-const join = path.join
+
+const { join } = path
 const resolve = dir => path.join(__dirname, '../', dir)
 
 module.exports = {
   // 获取文件绝对路径
   resolve,
-  // 获取webpack中入口文件对象entry的文件列表
   /**
-   *
-   * @param {*} path 需要读取的文件夹路径
+   * 获取webpack中入口文件对象entry的文件列表
+   * @param string path 需要读取的文件夹路径
    * @return object 返回一个入口文件对象
    */
-  getComponentEntries(path) {
-    let files = fs.readdirSync(resolve(path))
+  getComponentEntries(pathStr) {
+    const files = fs.readdirSync(resolve(pathStr))
     const componentEntries = files.reduce((ret, item) => {
-      const itemPath = join(path, item)
+      const itemPath = join(pathStr, item)
       const tempPath = resolve(itemPath)
       const isDir = fs.statSync(tempPath).isDirectory()
       if (isDir) {

@@ -2,8 +2,6 @@
   <div id="app">
     <tal-button></tal-button>
     <tal-input></tal-input>
-    <el-switch v-model="value" active-color="#13ce66" inactive-color="#ff4949">
-    </el-switch>
   </div>
 </template>
 <script>

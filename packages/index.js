@@ -1,7 +1,7 @@
 import './style/index.scss'
-import Button from './components/button/index'
-import Input from './components/input/index'
-import Element from './components/element/index'
+import { default as Button } from './components/button/index'
+import { default as Input } from './components/input/index'
+import { default as Element } from './components/element/index'
 
 const components = [Button, Input, Element]
 const Lib = {
@@ -12,5 +12,3 @@ const Lib = {
   }
 }
 export default Lib
-
-export { Button, Input, Element }

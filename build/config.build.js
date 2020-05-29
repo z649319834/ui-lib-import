@@ -1,24 +1,25 @@
 const { resolve, getComponentEntries } = require('./utils')
-const pub = require('./config.pub')
+const baseConfig = require('./config.base')
 
 module.exports = {
   outputDir: resolve('lib'),
   configureWebpack: {
     entry: {
       ...getComponentEntries('packages/components'),
-      style: resolve('/packages/style/index.scss'),
-      index: resolve('/packages/index.js')
+      index: resolve('packages/index.js'),
+      style: resolve('packages/style/index.scss')
     },
     output: {
       filename: '[name]/index.js',
       libraryTarget: 'umd',
       libraryExport: 'default',
-      library: 'VueLib'
+      library: 'Lib'
     },
-    resolve: pub.resolve
+    externals: ['vue'],
+    ...baseConfig
   },
   css: {
-    sourceMap: false,
+    sourceMap: true,
     extract: {
       filename: '[name]/index.css'
     }
@@ -32,11 +33,28 @@ module.exports = {
     config.plugins.delete('hmr')
     config.entryPoints.delete('app')
 
+    // 修改字体文件输出的路径
     config.module
       .rule('fonts')
       .use('url-loader')
       .tap(option => {
-        option.fallback.options.name = 'static/fonts/[name].[hash:8].[ext]'
+        option.fallback.options.name = 'style/fonts/[name].[hash:8].[ext]'
+        return option
+      })
+    // 修改图片输出的路径
+    config.module
+      .rule('images')
+      .use('url-loader')
+      .tap(option => {
+        option.fallback.options.name = 'style/images/[name].[hash:8].[ext]'
+        return option
+      })
+    // 修改图片输出的路径
+    config.module
+      .rule('svg')
+      .use('file-loader')
+      .tap(option => {
+        option.name = 'style/images/[name].[hash:8].[ext]'
         return option
       })
   }
