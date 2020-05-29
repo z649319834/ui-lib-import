@@ -134,6 +134,31 @@ module.exports = {
 
 **⚠️ 注意： 如果是全部引入组件包，需要删除以上配置，否则会影响组件包主入口文件的引入**
 
+### Example
+
+按需引入
+
+```
+<!-- 公共样式文件 -->
+import 'vue-lib-test/lib/style/index.css'
+
+import { Button,Input } from 'vue-lib-test'
+Vue.use(Button)
+Vue.use(Input)
+
+```
+
+全局引入
+
+```
+<!-- 所有的样式文件 -->
+import 'vue-lib-test/lib/index/index.css'
+
+import Lib from 'vue-lib-test'
+Vue.use(Lib)
+
+```
+
 ### Run
 
 ```
@@ -150,4 +175,10 @@ yarn build
 
 ```
 yarn build:app
+```
+
+### test npm 测试打包后的能否正常使用
+
+```
+yarn copy && yarn serve
 ```

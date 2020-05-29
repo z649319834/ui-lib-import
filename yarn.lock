@@ -8328,8 +8328,22 @@ vue-lib-test@^1.0.8:
     vue-router "^3.1.6"
     vuex "^3.1.3"
 
+vue-lib-test@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.npmjs.org/vue-lib-test/-/vue-lib-test-1.0.9.tgz#a5a213b2e42ac2ce12791f3b54fda76807e3a4d5"
+  integrity sha512-/pToI+hr4i96WvaO1TfR/t86v6F7rH2YvnGbij4JqIuhr2wGRYv6OvgaoQj12Aq07Ekymp6VCDRwzYAXfXxQ/A==
+  dependencies:
+    core-js "^3.6.4"
+    element-ui "^2.13.2"
+    vue "^2.6.11"
+    vue-class-component "^7.2.3"
+    vue-lib-test "^1.0.8"
+    vue-property-decorator "^8.4.1"
+    vue-router "^3.1.6"
+    vuex "^3.1.3"
+
 "vue-lib@file:.":
-  version "1.0.8"
+  version "1.0.9"
   dependencies:
     core-js "^3.6.4"
     element-ui "^2.13.2"
